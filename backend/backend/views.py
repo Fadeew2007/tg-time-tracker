@@ -29,44 +29,55 @@ class StartWork(APIView):
 
     def post(self, request):
         user = request.user
-        session = WorkSession.objects.create(user=user, start_time=now(), status='active')
-        return Response({"message": "Робота розпочата!", "session_id": session.id})
+        existing_session = WorkSession.objects.filter(user=user, status="active").last()
+
+        if existing_session:
+            return Response({"error": "❌ У вас вже є активна зміна! Використовуйте /stop_work для завершення або /pause_work для перерви."}, status=400)
+
+        session = WorkSession.objects.create(user=user, start_time=now(), status="active")
+        return Response({"message": "✅ Роботу розпочато!", "session_id": session.id})
 
 class PauseWork(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        session = WorkSession.objects.filter(user=request.user, status='active').last()
-        if session:
-            session.pause_time = now()
-            session.status = 'paused'
-            session.save()
-            return Response({"message": "Робота поставлена на паузу!"})
-        return Response({"error": "Немає активної сесії."}, status=400)
+        session = WorkSession.objects.filter(user=request.user, status="active").last()
+
+        if not session:
+            return Response({"error": "❌ Ви ще не почали роботу! Використовуйте /start_work."}, status=400)
+
+        session.pause_time = now()
+        session.status = "paused"
+        session.save()
+        return Response({"message": "⏸ Робота поставлена на паузу!"})
 
 class ResumeWork(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        session = WorkSession.objects.filter(user=request.user, status='paused').last()
-        if session:
-            session.resume_time = now()
-            session.status = 'active'
-            session.save()
-            return Response({"message": "Робота відновлена!"})
-        return Response({"error": "Немає сесії на паузі."}, status=400)
+        session = WorkSession.objects.filter(user=request.user, status="paused").last()
+
+        if not session:
+            return Response({"error": "❌ Ваша зміна не була поставлена на паузу!"}, status=400)
+
+        session.resume_time = now()
+        session.status = "active"
+        session.save()
+        return Response({"message": "▶️ Робота відновлена!"})
 
 class StopWork(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        session = WorkSession.objects.filter(user=request.user, status='active').last()
-        if session:
-            session.end_time = now()
-            session.status = 'ended'
-            session.save()
-            return Response({"message": "Робоча зміна завершена!"})
-        return Response({"error": "Немає активної сесії."}, status=400)
+        session = WorkSession.objects.filter(user=request.user, status__in=["active", "paused"]).last()
+
+        if not session:
+            return Response({"error": "❌ Ви ще не почали зміну! Використовуйте /start_work."}, status=400)
+
+        session.end_time = now()
+        session.status = "ended"
+        session.save()
+        return Response({"message": "✅ Робоча зміна завершена!"})
 
 class MyHours(APIView):
     permission_classes = [IsAuthenticated]

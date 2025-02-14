@@ -11,7 +11,6 @@ from bot.config import API_URL
 router = Router()
 user_tokens = {}  # Збереження токенів користувачів у пам’яті (тимчасово)
 
-
 class ReportState(StatesGroup):
     choosing_worker = State()
     choosing_year = State()
@@ -28,7 +27,7 @@ async def start(message: types.Message):
     if response.status_code == 200:
         data = response.json()
         user_tokens[telegram_id] = data["token"]
-        await message.answer("Привіт! Ви успішно автентифіковані.\nВикористовуй /start_work, /pause_work, /resume_work, /stop_work, /my_hours, /report для відстеження робочого часу.")
+        await message.answer("Привіт! Ви успішно автентифіковані.\nВикористовуйте /start_work щоб розпочати роботу, /pause_work, /resume_work, /stop_work, /my_hours, /report для відстеження робочого часу.")
     else:
         await message.answer("❌ Помилка автентифікації.")
 
@@ -43,10 +42,12 @@ async def start_work(message: types.Message):
         return
 
     response = requests.post(f"{API_URL}start_work/", headers={"Authorization": f"Token {token}"})
+    data = response.json()
+
     if response.status_code == 200:
         await message.answer("✅ Роботу розпочато!")
     else:
-        await message.answer("❌ Помилка: неможливо розпочати зміну.")
+        await message.answer(data.get("error", "❌ Помилка: неможливо розпочати зміну."))
 
 @router.message(Command("pause_work"))
 async def pause_work(message: types.Message):
@@ -58,10 +59,12 @@ async def pause_work(message: types.Message):
         return
 
     response = requests.post(f"{API_URL}pause_work/", headers={"Authorization": f"Token {token}"})
+    data = response.json()
+
     if response.status_code == 200:
         await message.answer("⏸ Робота поставлена на паузу!")
     else:
-        await message.answer("❌ Помилка: немає активної сесії.")
+        await message.answer(data.get("error", "❌ Помилка: немає активної сесії."))
 
 @router.message(Command("resume_work"))
 async def resume_work(message: types.Message):
@@ -73,10 +76,12 @@ async def resume_work(message: types.Message):
         return
 
     response = requests.post(f"{API_URL}resume_work/", headers={"Authorization": f"Token {token}"})
+    data = response.json()
+
     if response.status_code == 200:
         await message.answer("▶️ Робота відновлена!")
     else:
-        await message.answer("❌ Помилка: немає сесії на паузі.")
+        await message.answer(data.get("error", "❌ Помилка: немає сесії на паузі."))
 
 @router.message(Command("stop_work"))
 async def stop_work(message: types.Message):
@@ -88,10 +93,12 @@ async def stop_work(message: types.Message):
         return
 
     response = requests.post(f"{API_URL}stop_work/", headers={"Authorization": f"Token {token}"})
+    data = response.json()
+
     if response.status_code == 200:
         await message.answer("✅ Робоча зміна завершена!")
     else:
-        await message.answer("❌ Помилка: немає активної зміни.")
+        await message.answer(data.get("error", "❌ Помилка: немає активної зміни."))
 
 
 @router.message(Command("my_hours"))
