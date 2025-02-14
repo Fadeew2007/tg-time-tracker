@@ -28,7 +28,7 @@ async def start(message: types.Message):
     if response.status_code == 200:
         data = response.json()
         user_tokens[telegram_id] = data["token"]
-        await message.answer("Привіт! Ви успішно автентифіковані.\nВикористовуй /start_work, /stop_work, /my_hours, /report для відстеження робочого часу.")
+        await message.answer("Привіт! Ви успішно автентифіковані.\nВикористовуй /start_work, /pause_work, /resume_work, /stop_work, /my_hours, /report для відстеження робочого часу.")
     else:
         await message.answer("❌ Помилка автентифікації.")
 
@@ -48,6 +48,35 @@ async def start_work(message: types.Message):
     else:
         await message.answer("❌ Помилка: неможливо розпочати зміну.")
 
+@router.message(Command("pause_work"))
+async def pause_work(message: types.Message):
+    telegram_id = message.from_user.id
+    token = user_tokens.get(telegram_id)
+
+    if not token:
+        await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
+        return
+
+    response = requests.post(f"{API_URL}pause_work/", headers={"Authorization": f"Token {token}"})
+    if response.status_code == 200:
+        await message.answer("⏸ Робота поставлена на паузу!")
+    else:
+        await message.answer("❌ Помилка: немає активної сесії.")
+
+@router.message(Command("resume_work"))
+async def resume_work(message: types.Message):
+    telegram_id = message.from_user.id
+    token = user_tokens.get(telegram_id)
+
+    if not token:
+        await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
+        return
+
+    response = requests.post(f"{API_URL}resume_work/", headers={"Authorization": f"Token {token}"})
+    if response.status_code == 200:
+        await message.answer("▶️ Робота відновлена!")
+    else:
+        await message.answer("❌ Помилка: немає сесії на паузі.")
 
 @router.message(Command("stop_work"))
 async def stop_work(message: types.Message):
