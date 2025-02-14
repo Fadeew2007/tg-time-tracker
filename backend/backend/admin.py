@@ -3,10 +3,10 @@ from .models import User, WorkSession
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username', 'telegram_id', 'role', 'is_active', 'is_staff')  # Поля для списку
-    search_fields = ('username', 'telegram_id')  # Додає пошук по username і Telegram ID
-    list_filter = ('role', 'is_active')  # Фільтри за роллю та активністю
-    fields = ('username', 'telegram_id', 'role', 'is_active', 'is_staff')  # Поля, які можна змінювати
+    list_display = ('id', 'first_name', 'last_name', 'username', 'telegram_id', 'role', 'is_active', 'is_staff')  # Тепер відображаємо імена
+    search_fields = ('first_name', 'last_name', 'telegram_id')  # Додаємо пошук за іменем
+    list_filter = ('role', 'is_active')  # Фільтри за роллю
+    fields = ('first_name', 'last_name', 'username', 'telegram_id', 'role', 'is_active', 'is_staff')  # Поля, які можна змінювати
 
 @admin.register(WorkSession)
 class WorkSessionAdmin(admin.ModelAdmin):

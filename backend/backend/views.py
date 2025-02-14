@@ -84,16 +84,19 @@ class AdminReport(APIView):
 
         sessions = WorkSession.objects.select_related("user").all()
 
-        report_data = defaultdict(lambda: defaultdict(list))  # Групування по днях
+        report_data = defaultdict(lambda: defaultdict(list))
 
         for session in sessions:
             start_date = session.start_time.date()
             end_time = session.end_time if session.end_time else now()
             duration = end_time - session.start_time
+            hours, minutes = divmod(duration.total_seconds() // 60, 60)
 
-            hours, minutes = divmod(duration.total_seconds() // 60, 60)  # Отримуємо години та хвилини
+            full_name = f"{session.user.first_name} {session.user.last_name}".strip()
+            if not full_name or full_name == "None None":
+                full_name = session.user.username  # Якщо ім'я відсутнє, використовуємо username
 
-            report_data[session.user.username][start_date].append({
+            report_data[full_name][start_date].append({
                 "start": session.start_time.strftime("%H:%M"),
                 "end": session.end_time.strftime("%H:%M") if session.end_time else "Ще триває",
                 "hours": f"{int(hours)} год {int(minutes)} хв"
@@ -105,7 +108,7 @@ class AdminReport(APIView):
             for day, logs in days.items():
                 total_duration = sum(
                     (session.end_time - session.start_time).total_seconds() if session.end_time else (now() - session.start_time).total_seconds()
-                    for session in WorkSession.objects.filter(user__username=user, start_time__date=day)
+                    for session in WorkSession.objects.filter(user__first_name=user.split()[0], start_time__date=day)
                 )
                 total_hours, total_minutes = divmod(total_duration // 60, 60)
                 day_report = f"📅 {day} (🔹 {int(total_hours)} год {int(total_minutes)} хв)"

@@ -6,12 +6,14 @@ class User(AbstractUser):
         ('admin', 'Admin'),
         ('worker', 'Worker'),
     ]
-    
+
     telegram_id = models.BigIntegerField(unique=True, null=True, blank=True)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='worker')
+    first_name = models.CharField(max_length=100, blank=True, null=True)  # Додаємо ім'я
+    last_name = models.CharField(max_length=100, blank=True, null=True)  # Додаємо прізвище
 
     def __str__(self):
-        return f"{self.username} ({self.role})"
+        return f"{self.first_name} {self.last_name} ({self.role})" if self.first_name and self.last_name else self.username
 
 class WorkSession(models.Model):
     STATUS_CHOICES = [
