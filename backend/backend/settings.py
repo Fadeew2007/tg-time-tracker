@@ -93,11 +93,15 @@ REST_FRAMEWORK = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "Europe/Kyiv"
 
 USE_I18N = True
 
 USE_TZ = True
+
+DATE_FORMAT = "d.m.Y"
+
+USE_L10N = False
 
 STATIC_URL = 'static/'
 

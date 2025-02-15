@@ -1,4 +1,6 @@
 import requests
+import pytz
+from datetime import datetime
 
 from aiogram import F, Router, types
 from aiogram.filters import Command
@@ -10,6 +12,8 @@ from bot.config import API_URL
 
 router = Router()
 user_tokens = {}  # Збереження токенів користувачів у пам’яті (тимчасово)
+
+kyiv_tz = pytz.timezone("Europe/Kyiv")
 
 class ReportState(StatesGroup):
     choosing_worker = State()
@@ -27,7 +31,27 @@ async def start(message: types.Message):
     if response.status_code == 200:
         data = response.json()
         user_tokens[telegram_id] = data["token"]
-        await message.answer("Привіт! Ви успішно автентифіковані.\nВикористовуйте /start_work щоб розпочати роботу, /pause_work, /resume_work, /stop_work, /my_hours, /report для відстеження робочого часу.")
+
+        # Створюємо клавіатуру з кнопками
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="▶️ Почати роботу"), KeyboardButton(text="📊 Мої години"), KeyboardButton(text="📋 Звіт")]
+            ],
+            resize_keyboard=True
+        )
+
+        await message.answer(
+            "🍰 Вітаємо в DESSEE!\n\n"
+            "📌 Команди:\n"
+            "▶️ Почати роботу – розпочати зміну\n"
+            "⏸ Пауза – поставити роботу на паузу\n"
+            "▶️ Відновити – продовжити роботу після паузи\n"
+            "🛑 Завершити – завершити зміну\n\n"
+            "📊 Мої години – переглянути свої робочі години\n\n"
+            "📋 Звіт – для адмінів\n\n"
+            "⚡ Використовуйте кнопки нижче для швидкого доступу!",
+            reply_markup=keyboard
+        )
     else:
         await message.answer("❌ Помилка автентифікації.")
 
@@ -45,7 +69,16 @@ async def start_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        await message.answer("✅ Роботу розпочато!")
+        # Оновлюємо клавіатуру після старту роботи
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="⏸ Пауза"), KeyboardButton(text="🛑 Завершити")],
+                [KeyboardButton(text="📊 Мої години"), KeyboardButton(text="📋 Звіт")]
+            ],
+            resize_keyboard=True
+        )
+
+        await message.answer("✅ Роботу розпочато!", reply_markup=keyboard)
     else:
         await message.answer(data.get("error", "❌ Помилка: неможливо розпочати зміну."))
 
@@ -62,7 +95,16 @@ async def pause_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        await message.answer("⏸ Робота поставлена на паузу!")
+        # Оновлюємо клавіатуру після паузи роботи
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="▶️ Відновити"), KeyboardButton(text="🛑 Завершити")],
+                [KeyboardButton(text="📊 Мої години"), KeyboardButton(text="📋 Звіт")]
+            ],
+            resize_keyboard=True
+        )
+
+        await message.answer("⏸ Робота поставлена на паузу!", reply_markup=keyboard)
     else:
         await message.answer(data.get("error", "❌ Помилка: немає активної сесії."))
 
@@ -79,7 +121,16 @@ async def resume_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        await message.answer("▶️ Робота відновлена!")
+        # Оновлюємо клавіатуру після відновлення роботи
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="⏸ Пауза"), KeyboardButton(text="🛑 Завершити")],
+                [KeyboardButton(text="📊 Мої години"), KeyboardButton(text="📋 Звіт")]
+            ],
+            resize_keyboard=True
+        )
+
+        await message.answer("▶️ Робота відновлена!", reply_markup=keyboard)
     else:
         await message.answer(data.get("error", "❌ Помилка: немає сесії на паузі."))
 
@@ -96,7 +147,16 @@ async def stop_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        await message.answer("✅ Робоча зміна завершена!")
+        # Оновлюємо клавіатуру після завершення роботи
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="▶️ Почати роботу")],
+                [KeyboardButton(text="📊 Мої години"), KeyboardButton(text="📋 Звіт")]
+            ],
+            resize_keyboard=True
+        )
+
+        await message.answer("✅ Робоча зміна завершена! Дякуємо за роботу!", reply_markup=keyboard)
     else:
         await message.answer(data.get("error", "❌ Помилка: немає активної зміни."))
 
@@ -111,10 +171,22 @@ async def my_hours(message: types.Message):
         return
 
     response = requests.get(f"{API_URL}my_hours/", headers={"Authorization": f"Token {token}"})
+    data = response.json()
+
     if response.status_code == 200:
-        data = response.json()
-        text = "\n".join([f"{item['start_time']} - {item.get('end_time', 'Ще триває')}" for item in data])
-        await message.answer(f"🕒 Твої години:\n{text}")
+        if "error" in data:
+            await message.answer(data["error"])
+            return
+
+        summary = data["summary"]
+        days_list = "\n".join(data["days"])
+
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[[KeyboardButton(text="⏪ Попередній місяць")]],
+            resize_keyboard=True
+        )
+
+        await message.answer(f"{summary}\n\n{days_list}", reply_markup=keyboard)
     else:
         await message.answer("❌ Помилка отримання годин.")
 
@@ -210,3 +282,27 @@ async def show_report(message: types.Message, state: FSMContext):
         await message.answer(report)
     else:
         await message.answer("❌ Помилка отримання звіту.")
+
+@router.message(F.text == "▶️ Почати роботу")
+async def button_start_work(message: types.Message):
+    await start_work(message)
+
+@router.message(F.text == "⏸ Пауза")
+async def button_pause_work(message: types.Message):
+    await pause_work(message)
+
+@router.message(F.text == "▶️ Відновити")
+async def button_resume_work(message: types.Message):
+    await resume_work(message)
+
+@router.message(F.text == "🛑 Завершити")
+async def button_stop_work(message: types.Message):
+    await stop_work(message)
+
+@router.message(F.text == "📊 Мої години")
+async def button_my_hours(message: types.Message):
+    await my_hours(message)
+
+@router.message(F.text == "📋 Звіт")
+async def button_report(message: types.Message, state: FSMContext):
+    await start_report(message, state)

@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.timezone import localtime
 from .models import User, WorkSession
 
 @admin.register(User)
@@ -10,6 +11,16 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(WorkSession)
 class WorkSessionAdmin(admin.ModelAdmin):
-    list_display = ('user', 'start_time', 'end_time', 'status')
+    list_display = ('user', 'formatted_start_time', 'formatted_end_time', 'status')  # Форматовані дати
     list_filter = ('status',)
-    search_fields = ('user__username',)
+    search_fields = ('user__username', 'user__telegram_id')  # Додано пошук за Telegram ID
+
+    def formatted_start_time(self, obj):
+        """Форматуємо дату початку у формат ДД.ММ.РРРР ГГ:ХХ"""
+        return localtime(obj.start_time).strftime("%d.%m.%Y %H:%M")
+    formatted_start_time.short_description = "Початок роботи"
+
+    def formatted_end_time(self, obj):
+        """Форматуємо дату завершення у формат ДД.ММ.РРРР ГГ:ХХ"""
+        return localtime(obj.end_time).strftime("%d.%m.%Y %H:%M") if obj.end_time else "Ще триває"
+    formatted_end_time.short_description = "Кінець роботи"

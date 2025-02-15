@@ -1,5 +1,6 @@
 from collections import defaultdict
 from datetime import datetime, timedelta
+import pytz
 
 from django.db.models import Count, Sum
 from django.utils.timezone import now
@@ -10,6 +11,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .models import User, WorkSession
+
+kyiv_tz = pytz.timezone("Europe/Kyiv")
 
 class TelegramAuth(APIView):
     def post(self, request):
@@ -29,12 +32,13 @@ class StartWork(APIView):
 
     def post(self, request):
         user = request.user
+        current_time = now().astimezone(kyiv_tz)
+
         existing_session = WorkSession.objects.filter(user=user, status="active").last()
-
         if existing_session:
-            return Response({"error": "❌ У вас вже є активна зміна! Використовуйте /stop_work для завершення або /pause_work для перерви."}, status=400)
+            return Response({"error": "❌ У вас вже є активна зміна! Використовуйте /pause_work для перерви або /stop_work для завершення."}, status=400)
 
-        session = WorkSession.objects.create(user=user, start_time=now(), status="active")
+        session = WorkSession.objects.create(user=user, start_time=current_time, status="active")
         return Response({"message": "✅ Роботу розпочато!", "session_id": session.id})
 
 class PauseWork(APIView):
@@ -46,7 +50,7 @@ class PauseWork(APIView):
         if not session:
             return Response({"error": "❌ Ви ще не почали роботу! Використовуйте /start_work."}, status=400)
 
-        session.pause_time = now()
+        session.pause_time = now().astimezone(kyiv_tz)
         session.status = "paused"
         session.save()
         return Response({"message": "⏸ Робота поставлена на паузу!"})
@@ -60,7 +64,7 @@ class ResumeWork(APIView):
         if not session:
             return Response({"error": "❌ Ваша зміна не була поставлена на паузу!"}, status=400)
 
-        session.resume_time = now()
+        session.resume_time = now().astimezone(kyiv_tz)
         session.status = "active"
         session.save()
         return Response({"message": "▶️ Робота відновлена!"})
@@ -74,7 +78,7 @@ class StopWork(APIView):
         if not session:
             return Response({"error": "❌ Ви ще не почали зміну! Використовуйте /start_work."}, status=400)
 
-        session.end_time = now()
+        session.end_time = now().astimezone(kyiv_tz)
         session.status = "ended"
         session.save()
         return Response({"message": "✅ Робоча зміна завершена!"})
@@ -82,9 +86,60 @@ class StopWork(APIView):
 class MyHours(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
-        sessions = WorkSession.objects.filter(user=request.user).values()
-        return Response(list(sessions))
+    def get(self, request, year=None, month=None):
+        today = now().astimezone(kyiv_tz)
+
+        # Визначаємо поточний або вказаний місяць і рік
+        if not year or not month:
+            year, month = today.year, today.month
+
+        # Визначаємо попередній місяць
+        if month == 1:
+            prev_year, prev_month = year - 1, 12
+        else:
+            prev_year, prev_month = year, month - 1
+
+        # Отримуємо всі сесії за поточний місяць
+        sessions = WorkSession.objects.filter(
+            user=request.user, 
+            start_time__year=year, 
+            start_time__month=month
+        )
+
+        # Перевіряємо, чи є години за попередній місяць
+        has_previous = WorkSession.objects.filter(
+            user=request.user, 
+            start_time__year=prev_year, 
+            start_time__month=prev_month
+        ).exists()
+
+        if not sessions.exists():
+            return Response({
+                "error": "📊 У вас ще немає робочих годин у цьому місяці.",
+                "has_previous": has_previous
+            })
+
+        total_work_time = timedelta()
+        daily_data = defaultdict(timedelta)
+
+        for session in sessions:
+            actual_end_time = session.end_time if session.end_time else now().astimezone(kyiv_tz)
+            work_duration = actual_end_time - session.start_time
+            daily_data[session.start_time.date()] += work_duration
+            total_work_time += work_duration
+
+        total_hours, total_minutes = divmod(total_work_time.total_seconds() // 60, 60)
+
+        formatted_days = [
+            f"📅 {day.strftime('%d.%m.%Y')}: {int(daily.total_seconds() // 3600)} год {int((daily.total_seconds() % 3600) // 60)} хв"
+            for day, daily in sorted(daily_data.items(), reverse=True)
+        ]
+
+        return Response({
+            "summary": f"📆 **{today.strftime('%B %Y')}**\n🔹 Всього відпрацьовано: {int(total_hours)} год {int(total_minutes)} хв",
+            "days": formatted_days,
+            "has_previous": has_previous  # Оновлена перевірка
+        })
 
 class AdminReport(APIView):
     permission_classes = [IsAuthenticated]
@@ -175,37 +230,37 @@ class MonthlyReport(APIView):
             return Response({"error": "📊 Немає даних за цей місяць."})
 
         total_work_time = timedelta()
-
-        # Формуємо структуру для відображення за днями
         daily_data = defaultdict(list)
 
         for session in sessions:
-            day = session.start_time.strftime("%d.%m.%Y")  # Формат ДД.ММ.РРРР
+            day = session.start_time.astimezone(kyiv_tz).strftime("%d.%m.%Y")
 
-            # Рахуємо реальний робочий час (віднімаючи паузи)
+            # Визначаємо фактичний кінець роботи
+            actual_end_time = session.end_time.astimezone(kyiv_tz) if session.end_time else None
+            if session.pause_time and not session.resume_time:
+                actual_end_time = session.pause_time.astimezone(kyiv_tz)
+
+            # Рахуємо фактичний робочий час
             actual_work_time = timedelta()
-            if session.end_time:
-                actual_work_time += (session.end_time - session.start_time)
+            if actual_end_time:
+                actual_work_time += (actual_end_time - session.start_time.astimezone(kyiv_tz))
 
-            # Віднімаємо паузи, якщо вони були
+            # Віднімаємо час паузи, якщо працівник повернувся до роботи
             if session.pause_time and session.resume_time:
-                actual_work_time -= (session.resume_time - session.pause_time)
+                actual_work_time -= (session.resume_time.astimezone(kyiv_tz) - session.pause_time.astimezone(kyiv_tz))
 
             total_work_time += actual_work_time
 
             hours, minutes = divmod(actual_work_time.total_seconds() // 60, 60)
             daily_data[day].append(
-                f"🕒 {session.start_time.strftime('%H:%M')} - {session.end_time.strftime('%H:%M') if session.end_time else 'Ще триває'} "
+                f"🕒 {session.start_time.astimezone(kyiv_tz).strftime('%H:%M')} - "
+                f"{actual_end_time.strftime('%H:%M') if actual_end_time else 'Ще триває'} "
                 f"({int(hours)} год {int(minutes)} хв)"
             )
 
-        # Загальна кількість годин за місяць
         total_hours, total_minutes = divmod(total_work_time.total_seconds() // 60, 60)
 
-        # Форматуємо звіт у вигляді тексту
         report = f"📆 **{month:02d}.{year}**\n🔹 Загальна кількість: {int(total_hours)} год {int(total_minutes)} хв\n\n"
-
-        # Сортуємо дні від новіших до старіших
         sorted_days = sorted(daily_data.keys(), reverse=True)
         for day in sorted_days:
             report += f"📅 {day}:\n" + "\n".join(daily_data[day]) + "\n"
