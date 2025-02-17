@@ -53,7 +53,9 @@ async def start(message: types.Message):
         # Створюємо клавіатуру з кнопками
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
-                [KeyboardButton(text="▶️ Почати роботу"), KeyboardButton(text="📊 Мої години"), KeyboardButton(text="📋 Звіт")]
+                [KeyboardButton(text="▶️ Почати роботу")],
+                [KeyboardButton(text="📊 Мої години")],
+                [KeyboardButton(text="📋 Звіт")]
             ],
             resize_keyboard=True
         )
@@ -177,7 +179,8 @@ async def stop_work(message: types.Message):
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="▶️ Почати роботу")],
-                [KeyboardButton(text="📊 Мої години"), KeyboardButton(text="📋 Звіт")]
+                [KeyboardButton(text="📊 Мої години")],
+                [KeyboardButton(text="📋 Звіт")]
             ],
             resize_keyboard=True
         )
@@ -306,7 +309,13 @@ async def start_report(message: types.Message, state: FSMContext):
         await state.update_data(workers=workers)
         await message.answer("👤 Оберіть працівника:", reply_markup=keyboard)
     else:
-        await message.answer("❌ Немає доступних працівників.")
+        try:
+            data = response.json()
+            error = data.get("error", "❌ Немає доступних працівників.")
+        except Exception:
+            error = "❌ Немає доступних працівників."
+        # Якщо користувач не адмін, API поверне "🚫 У вас немає прав."
+        await message.answer(error)
 
 
 @router.message(ReportState.choosing_worker)

@@ -1,6 +1,8 @@
 from collections import defaultdict
 from datetime import datetime, timedelta
 import pytz
+from babel.dates import format_date
+
 
 from django.db.models import Count, Sum
 from django.utils.timezone import now
@@ -145,8 +147,10 @@ class MyHours(APIView):
             for day, daily in sorted(daily_data.items(), reverse=True)
         ]
 
+        formatted_date = format_date(today, format='LLLL yyyy', locale='uk').capitalize()
+
         return Response({
-            "summary": f"📆 **{today.strftime('%B %Y')}**\n🔹 Всього відпрацьовано: {int(total_hours)} год {int(total_minutes)} хв",
+            "summary": f"📆 **{formatted_date}**\n🔹 Всього відпрацьовано: {int(total_hours)} год {int(total_minutes)} хв",
             "days": formatted_days
         })
 
@@ -201,7 +205,7 @@ class AvailableWorkers(APIView):
 
     def get(self, request):
         if request.user.role != "admin":
-            return Response({"error": "🚫 У вас немає прав."}, status=403)
+            return Response({"error": "🚫 Звіт доступний тільки адміну 🙅🏻‍♀️"}, status=403)
 
         workers = User.objects.filter(worksession__isnull=False).distinct()
         return Response([{"id": worker.id, "name": f"{worker.first_name} {worker.last_name}".strip() or worker.username} for worker in workers])
@@ -211,7 +215,7 @@ class AvailableYears(APIView):
 
     def get(self, request, user_id):
         if request.user.role != "admin":
-            return Response({"error": "🚫 У вас немає прав."}, status=403)
+            return Response({"error": "🚫 Звіт доступний тільки адміну."}, status=403)
 
         years = WorkSession.objects.filter(user_id=user_id).dates("start_time", "year").distinct()
         return Response([year.year for year in years])
@@ -221,7 +225,7 @@ class AvailableMonths(APIView):
 
     def get(self, request, user_id, year):
         if request.user.role != "admin":
-            return Response({"error": "🚫 У вас немає прав."}, status=403)
+            return Response({"error": "🚫 Звіт доступний тільки адміну."}, status=403)
 
         months = WorkSession.objects.filter(user_id=user_id, start_time__year=year).dates("start_time", "month").distinct()
         return Response([month.month for month in months])
@@ -231,7 +235,7 @@ class MonthlyReport(APIView):
 
     def get(self, request, user_id, year, month):
         if request.user.role != "admin":
-            return Response({"error": "🚫 У вас немає прав для перегляду звіту."}, status=403)
+            return Response({"error": "🚫 Звіт доступний тільки адміну."}, status=403)
 
         sessions = WorkSession.objects.filter(
             user_id=user_id,
