@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.http import JsonResponse
 from django.urls import path
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from .views import StartWork, PauseWork, ResumeWork, StopWork, MyHours, TelegramAuth, AdminReport, AvailableWorkers, AvailableYears, AvailableMonths, MonthlyReport
+from .views import StartWork, PauseWork, ResumeWork, StopWork, MyHours, TelegramAuth, AdminReport, AvailableWorkers, AvailableYears, AvailableMonths, MonthlyReport, ActiveSession
 
 def home(request):
     return JsonResponse({"message": "API is working!"})
@@ -23,4 +23,5 @@ urlpatterns = [
     path("api/admin/years/<int:user_id>/", AvailableYears.as_view(), name="available_years"),
     path("api/admin/months/<int:user_id>/<int:year>/", AvailableMonths.as_view(), name="available_months"),
     path("api/admin/report/<int:user_id>/<int:year>/<int:month>/", MonthlyReport.as_view(), name="monthly_report"),
+    path("api/active_session/", ActiveSession.as_view(), name="active_session"),
 ]

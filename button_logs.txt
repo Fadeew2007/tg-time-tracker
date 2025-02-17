@@ -1,0 +1,116 @@
+17-02-2025 14:28:29 - Start polling
+17-02-2025 14:28:29 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 14:28:53 - Update id=418420479 is handled. Duration 242 ms by bot id=7884553220
+17-02-2025 14:29:02 - 17-02-2025 14:29:02 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+17-02-2025 14:29:02 - Update id=418420480 is handled. Duration 166 ms by bot id=7884553220
+17-02-2025 14:33:08 - 17-02-2025 14:33:08 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 14:33:08 - Update id=418420481 is handled. Duration 308 ms by bot id=7884553220
+17-02-2025 14:38:35 - 17-02-2025 14:38:35 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Відновити
+17-02-2025 14:38:35 - Update id=418420482 is handled. Duration 202 ms by bot id=7884553220
+17-02-2025 14:44:38 - 17-02-2025 14:44:38 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 14:44:39 - Update id=418420483 is handled. Duration 176 ms by bot id=7884553220
+17-02-2025 14:48:07 - 17-02-2025 14:48:07 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Відновити
+17-02-2025 14:48:07 - Update id=418420484 is handled. Duration 172 ms by bot id=7884553220
+17-02-2025 14:50:29 - 17-02-2025 14:50:29 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 14:50:29 - Update id=418420485 is handled. Duration 246 ms by bot id=7884553220
+17-02-2025 14:54:26 - 17-02-2025 14:54:26 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Відновити
+17-02-2025 14:54:26 - Update id=418420486 is handled. Duration 280 ms by bot id=7884553220
+17-02-2025 14:56:56 - 17-02-2025 14:56:56 | User ID: 530420753 | Username: nonamelviv | Button: 🛑 Завершити
+17-02-2025 14:56:56 - Update id=418420487 is handled. Duration 169 ms by bot id=7884553220
+17-02-2025 15:04:34 - Update id=418420488 is handled. Duration 335 ms by bot id=7884553220
+17-02-2025 15:04:36 - Update id=418420489 is handled. Duration 198 ms by bot id=7884553220
+17-02-2025 15:04:37 - Update id=418420490 is handled. Duration 175 ms by bot id=7884553220
+17-02-2025 15:04:38 - Update id=418420491 is handled. Duration 167 ms by bot id=7884553220
+17-02-2025 15:50:03 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+17-02-2025 15:50:03 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7884553220)
+17-02-2025 15:50:14 - Connection established (tryings = 1, bot id = 7884553220)
+17-02-2025 15:55:47 - Polling stopped
+17-02-2025 15:55:47 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 15:55:53 - Start polling
+17-02-2025 15:55:53 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 15:55:57 - Update id=418420492 is handled. Duration 352 ms by bot id=7884553220
+17-02-2025 15:55:58 - Update id=418420493 is handled. Duration 166 ms by bot id=7884553220
+17-02-2025 15:56:10 - Polling stopped
+17-02-2025 15:56:11 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 15:56:20 - Start polling
+17-02-2025 15:56:21 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 15:56:21 - Update id=418420495 is handled. Duration 257 ms by bot id=7884553220
+17-02-2025 15:56:21 - Update id=418420494 is handled. Duration 309 ms by bot id=7884553220
+17-02-2025 15:56:23 - Update id=418420496 is handled. Duration 143 ms by bot id=7884553220
+17-02-2025 15:56:26 - Update id=418420497 is handled. Duration 242 ms by bot id=7884553220
+17-02-2025 16:00:10 - Polling stopped
+17-02-2025 16:00:11 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 16:30:23 - Start polling
+17-02-2025 16:30:23 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 16:30:24 - Update id=418420498 is handled. Duration 192 ms by bot id=7884553220
+17-02-2025 16:30:26 - Update id=418420499 is handled. Duration 162 ms by bot id=7884553220
+17-02-2025 16:30:28 - Update id=418420500 is handled. Duration 178 ms by bot id=7884553220
+17-02-2025 16:30:31 - Update id=418420501 is handled. Duration 176 ms by bot id=7884553220
+17-02-2025 16:30:33 - Update id=418420502 is handled. Duration 221 ms by bot id=7884553220
+17-02-2025 16:30:34 - Update id=418420503 is handled. Duration 152 ms by bot id=7884553220
+17-02-2025 16:30:35 - Update id=418420504 is handled. Duration 161 ms by bot id=7884553220
+17-02-2025 16:30:36 - Update id=418420505 is handled. Duration 196 ms by bot id=7884553220
+17-02-2025 16:31:20 - Update id=418420506 is handled. Duration 160 ms by bot id=7884553220
+17-02-2025 16:31:21 - 17-02-2025 16:31:21 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+17-02-2025 16:31:22 - Update id=418420507 is handled. Duration 183 ms by bot id=7884553220
+17-02-2025 16:46:33 - 17-02-2025 16:46:33 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 16:46:33 - Update id=418420508 is handled. Duration 184 ms by bot id=7884553220
+17-02-2025 16:59:16 - 17-02-2025 16:59:16 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Відновити
+17-02-2025 16:59:17 - Update id=418420509 is handled. Duration 336 ms by bot id=7884553220
+17-02-2025 17:04:14 - 17-02-2025 17:04:14 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 17:04:14 - Update id=418420510 is handled. Duration 200 ms by bot id=7884553220
+17-02-2025 18:52:04 - 17-02-2025 18:52:04 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Відновити
+17-02-2025 18:52:05 - Update id=418420511 is handled. Duration 394 ms by bot id=7884553220
+17-02-2025 18:54:46 - 17-02-2025 18:54:46 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 18:54:47 - Update id=418420512 is handled. Duration 352 ms by bot id=7884553220
+17-02-2025 19:48:30 - 17-02-2025 19:48:30 | User ID: 530420753 | Username: nonamelviv | Button: 🛑 Завершити
+17-02-2025 19:48:30 - Update id=418420513 is handled. Duration 445 ms by bot id=7884553220
+17-02-2025 19:50:24 - Update id=418420514 is handled. Duration 232 ms by bot id=7884553220
+17-02-2025 19:50:25 - Update id=418420515 is handled. Duration 163 ms by bot id=7884553220
+17-02-2025 19:50:26 - Update id=418420516 is handled. Duration 235 ms by bot id=7884553220
+17-02-2025 19:50:27 - Update id=418420517 is handled. Duration 185 ms by bot id=7884553220
+17-02-2025 19:53:24 - Polling stopped
+17-02-2025 19:53:24 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 19:53:30 - Start polling
+17-02-2025 19:53:30 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 19:53:34 - Update id=418420518 is handled. Duration 269 ms by bot id=7884553220
+17-02-2025 19:53:36 - Update id=418420519 is handled. Duration 166 ms by bot id=7884553220
+17-02-2025 19:53:38 - Update id=418420520 is handled. Duration 243 ms by bot id=7884553220
+17-02-2025 19:53:38 - Update id=418420521 is handled. Duration 219 ms by bot id=7884553220
+17-02-2025 19:53:39 - Update id=418420522 is handled. Duration 157 ms by bot id=7884553220
+17-02-2025 19:55:34 - Polling stopped
+17-02-2025 19:55:34 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 19:55:40 - Start polling
+17-02-2025 19:55:40 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 19:55:44 - Update id=418420523 is handled. Duration 406 ms by bot id=7884553220
+17-02-2025 19:55:45 - Update id=418420524 is handled. Duration 166 ms by bot id=7884553220
+17-02-2025 19:55:46 - Update id=418420525 is handled. Duration 171 ms by bot id=7884553220
+17-02-2025 19:55:47 - Update id=418420526 is handled. Duration 223 ms by bot id=7884553220
+17-02-2025 19:55:48 - Update id=418420527 is handled. Duration 188 ms by bot id=7884553220
+17-02-2025 20:32:20 - Polling stopped
+17-02-2025 20:32:20 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 20:32:26 - Start polling
+17-02-2025 20:32:26 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+17-02-2025 20:32:35 - Update id=418420528 is handled. Duration 277 ms by bot id=7884553220
+17-02-2025 20:32:37 - Update id=418420529 is handled. Duration 232 ms by bot id=7884553220
+17-02-2025 20:32:38 - Update id=418420530 is handled. Duration 230 ms by bot id=7884553220
+17-02-2025 20:32:39 - Update id=418420531 is handled. Duration 231 ms by bot id=7884553220
+17-02-2025 20:32:40 - Update id=418420532 is handled. Duration 239 ms by bot id=7884553220
+17-02-2025 20:33:41 - Update id=418420533 is handled. Duration 157 ms by bot id=7884553220
+17-02-2025 20:33:43 - 17-02-2025 20:33:43 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+17-02-2025 20:33:43 - Update id=418420534 is handled. Duration 178 ms by bot id=7884553220
+17-02-2025 20:47:09 - 17-02-2025 20:47:09 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 20:47:09 - Update id=418420535 is handled. Duration 168 ms by bot id=7884553220
+17-02-2025 20:50:06 - 17-02-2025 20:50:06 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Відновити
+17-02-2025 20:50:06 - Update id=418420536 is handled. Duration 247 ms by bot id=7884553220
+17-02-2025 20:52:23 - 17-02-2025 20:52:23 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+17-02-2025 20:52:23 - Update id=418420537 is handled. Duration 219 ms by bot id=7884553220
+17-02-2025 20:56:12 - 17-02-2025 20:56:12 | User ID: 530420753 | Username: nonamelviv | Button: 🛑 Завершити
+17-02-2025 20:56:12 - Update id=418420538 is handled. Duration 171 ms by bot id=7884553220
+17-02-2025 20:58:47 - Update id=418420539 is handled. Duration 158 ms by bot id=7884553220
+17-02-2025 20:58:48 - Update id=418420540 is handled. Duration 183 ms by bot id=7884553220
+17-02-2025 20:58:49 - Update id=418420541 is handled. Duration 152 ms by bot id=7884553220
+17-02-2025 20:58:50 - Update id=418420542 is handled. Duration 195 ms by bot id=7884553220
+17-02-2025 20:58:51 - Update id=418420543 is handled. Duration 161 ms by bot id=7884553220
+17-02-2025 21:05:33 - Polling stopped
+17-02-2025 21:05:34 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'

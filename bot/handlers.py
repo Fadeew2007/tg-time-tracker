@@ -1,6 +1,8 @@
+import logging
+from datetime import datetime
+
 import requests
 import pytz
-from datetime import datetime
 
 from aiogram import F, Router, types
 from aiogram.filters import Command
@@ -10,10 +12,26 @@ from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 from bot.config import API_URL
 
+# Ініціалізація роутера
 router = Router()
-user_tokens = {}  # Збереження токенів користувачів у пам’яті (тимчасово)
+user_tokens = {}
 
+# Налаштування логування
+logging.basicConfig(
+    filename="button_logs.txt",
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+    datefmt="%d-%m-%Y %H:%M:%S"
+)
+
+# Часовий пояс Києва
 kyiv_tz = pytz.timezone("Europe/Kyiv")
+
+def log_button_press(user_id, username, button_text):
+    """Функція запису натискань кнопок у лог"""
+    log_entry = f"{datetime.now(kyiv_tz).strftime('%d-%m-%Y %H:%M:%S')} | User ID: {user_id} | Username: {username} | Button: {button_text}"
+    logging.info(log_entry)
+    print(log_entry)  # Вивід у консоль для зручності
 
 class ReportState(StatesGroup):
     choosing_worker = State()
@@ -61,6 +79,8 @@ async def start_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
 
+    log_button_press(telegram_id, message.from_user.username, "▶️ Почати роботу")
+
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
         return
@@ -78,7 +98,7 @@ async def start_work(message: types.Message):
             resize_keyboard=True
         )
 
-        await message.answer("✅ Роботу розпочато!", reply_markup=keyboard)
+        await message.answer("✅ Роботу розпочато! Гарного дня!🌞", reply_markup=keyboard)
     else:
         await message.answer(data.get("error", "❌ Помилка: неможливо розпочати зміну."))
 
@@ -86,6 +106,8 @@ async def start_work(message: types.Message):
 async def pause_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
+
+    log_button_press(telegram_id, message.from_user.username, "⏸ Пауза")
 
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
@@ -113,6 +135,8 @@ async def resume_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
 
+    log_button_press(telegram_id, message.from_user.username, "▶️ Відновити")
+
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
         return
@@ -138,6 +162,8 @@ async def resume_work(message: types.Message):
 async def stop_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
+
+    log_button_press(telegram_id, message.from_user.username, "🛑 Завершити")
 
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
@@ -188,7 +214,75 @@ async def my_hours(message: types.Message):
 
         await message.answer(f"{summary}\n\n{days_list}", reply_markup=keyboard)
     else:
+        await message.answer("❌ Помилка отримання годин.")@router.message(Command("my_hours"))
+async def my_hours(message: types.Message):
+    """Отримує години поточного місяця та виводить кнопку '⬅️ Назад'"""
+    telegram_id = message.from_user.id
+    token = user_tokens.get(telegram_id)
+
+    if not token:
+        await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
+        return
+
+    response = requests.get(f"{API_URL}my_hours/", headers={"Authorization": f"Token {token}"})
+    data = response.json()
+
+    if response.status_code == 200:
+        if "error" in data:
+            await message.answer(data["error"])
+            return
+
+        summary = data["summary"]
+        days_list = "\n".join(data["days"])
+
+        # Додаємо кнопку "⬅️ Назад"
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="⬅️ Назад")]
+            ],
+            resize_keyboard=True
+        )
+
+        await message.answer(f"{summary}\n\n{days_list}", reply_markup=keyboard)
+    else:
         await message.answer("❌ Помилка отримання годин.")
+
+@router.message(F.text == "⬅️ Назад")
+async def go_back(message: types.Message):
+    """Перевіряє, чи є активна сесія, і повертає відповідні кнопки"""
+    telegram_id = message.from_user.id
+    token = user_tokens.get(telegram_id)
+
+    if not token:
+        await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
+        return
+
+    # Отримуємо статус активної сесії
+    response = requests.get(f"{API_URL}active_session/", headers={"Authorization": f"Token {token}"})
+    data = response.json()
+
+    if response.status_code == 200 and data.get("active", False):
+        # Якщо сесія активна, показуємо кнопки для паузи або завершення
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="⏸ Пауза"), KeyboardButton(text="🛑 Завершити")],
+                [KeyboardButton(text="📋 Звіт")],
+                [KeyboardButton(text="📊 Мої години")]
+            ],
+            resize_keyboard=True
+        )
+    else:
+        # Якщо сесія неактивна, показуємо кнопку початку роботи
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="▶️ Почати роботу")],
+                [KeyboardButton(text="📋 Звіт")],
+                [KeyboardButton(text="📊 Мої години")]
+            ],
+            resize_keyboard=True
+        )
+
+    await message.answer("🔙 Повернення в головне меню:", reply_markup=keyboard)
 
 
 @router.message(Command("report"))

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from datetime import datetime, timedelta
 
 class User(AbstractUser):
     ROLE_CHOICES = [
@@ -32,3 +33,13 @@ class WorkSession(models.Model):
     def __str__(self):
         return f"{self.user.username} - {self.status}"
 
+class WorkPause(models.Model):
+    session = models.ForeignKey(WorkSession, on_delete=models.CASCADE, related_name="pauses")
+    pause_time = models.DateTimeField()
+    resume_time = models.DateTimeField(null=True, blank=True)
+
+    def duration(self):
+        """Повертає тривалість паузи"""
+        if self.resume_time:
+            return self.resume_time - self.pause_time
+        return timedelta(0)  # Якщо пауза ще не завершена
