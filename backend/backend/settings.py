@@ -17,6 +17,7 @@ load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-default-key")
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
+PORT = os.getenv("PORT", "8080")
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
