@@ -6,4 +6,3 @@ env/
 .env
 db.sqlite3
 *.xlsx
-*.txt

@@ -37,6 +37,7 @@ class ReportState(StatesGroup):
 
 @router.message(Command("start"))
 async def start(message: types.Message):
+    await message.answer("Привіт! Ви успішно запустили бота.")
     telegram_id = message.from_user.id
     username = message.from_user.username or f"user_{telegram_id}"
 
