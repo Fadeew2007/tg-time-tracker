@@ -352,3 +352,838 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 18-02-2025 01:30:07 - Update id=418420640 is handled. Duration 214 ms by bot id=7884553220
 18-02-2025 01:30:22 - Polling stopped
 18-02-2025 01:30:23 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:37:25 - Start polling
+18-02-2025 01:37:25 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:37:29 - Update id=418420641 is handled. Duration 160 ms by bot id=7884553220
+18-02-2025 01:37:30 - Update id=418420642 is handled. Duration 134 ms by bot id=7884553220
+18-02-2025 01:37:32 - Update id=418420643 is handled. Duration 146 ms by bot id=7884553220
+18-02-2025 01:37:33 - Update id=418420644 is handled. Duration 136 ms by bot id=7884553220
+18-02-2025 01:38:57 - Polling stopped
+18-02-2025 01:38:58 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:39:03 - Start polling
+18-02-2025 01:39:03 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:39:47 - Update id=418420645 is handled. Duration 195 ms by bot id=7884553220
+18-02-2025 01:39:49 - Update id=418420646 is handled. Duration 135 ms by bot id=7884553220
+18-02-2025 01:39:53 - Update id=418420647 is handled. Duration 144 ms by bot id=7884553220
+18-02-2025 01:43:19 - Polling stopped
+18-02-2025 01:43:19 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:43:25 - Start polling
+18-02-2025 01:43:25 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:43:25 - Update id=418420648 is handled. Duration 252 ms by bot id=7884553220
+18-02-2025 01:43:27 - Update id=418420649 is handled. Duration 140 ms by bot id=7884553220
+18-02-2025 01:43:29 - Update id=418420650 is handled. Duration 145 ms by bot id=7884553220
+18-02-2025 01:43:31 - Update id=418420651 is handled. Duration 71 ms by bot id=7884553220
+18-02-2025 01:43:36 - Update id=418420652 is handled. Duration 69 ms by bot id=7884553220
+18-02-2025 01:43:37 - Update id=418420653 is handled. Duration 58 ms by bot id=7884553220
+18-02-2025 01:45:10 - Polling stopped
+18-02-2025 01:45:10 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:45:15 - Start polling
+18-02-2025 01:45:16 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:45:17 - Update id=418420654 is handled. Duration 249 ms by bot id=7884553220
+18-02-2025 01:45:19 - Update id=418420655 is handled. Duration 138 ms by bot id=7884553220
+18-02-2025 01:45:21 - Update id=418420656 is handled. Duration 208 ms by bot id=7884553220
+18-02-2025 01:45:23 - Update id=418420657 is handled. Duration 174 ms by bot id=7884553220
+18-02-2025 01:45:24 - Update id=418420658 is handled. Duration 180 ms by bot id=7884553220
+18-02-2025 01:45:42 - Polling stopped
+18-02-2025 01:45:42 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:45:48 - Start polling
+18-02-2025 01:45:48 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:45:50 - Update id=418420659 is handled. Duration 240 ms by bot id=7884553220
+18-02-2025 01:45:52 - Update id=418420660 is handled. Duration 153 ms by bot id=7884553220
+18-02-2025 01:45:53 - Update id=418420661 is handled. Duration 181 ms by bot id=7884553220
+18-02-2025 01:45:57 - Update id=418420662 is handled. Duration 59 ms by bot id=7884553220
+18-02-2025 01:47:44 - Polling stopped
+18-02-2025 01:47:44 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:47:49 - Start polling
+18-02-2025 01:47:49 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:47:50 - Update id=418420663 is handled. Duration 271 ms by bot id=7884553220
+18-02-2025 01:47:51 - Update id=418420664 is handled. Duration 210 ms by bot id=7884553220
+18-02-2025 01:47:52 - Update id=418420665 is handled. Duration 140 ms by bot id=7884553220
+18-02-2025 01:47:53 - Update id=418420666 is handled. Duration 61 ms by bot id=7884553220
+18-02-2025 01:47:56 - Update id=418420667 is handled. Duration 66 ms by bot id=7884553220
+18-02-2025 01:48:05 - Update id=418420668 is handled. Duration 79 ms by bot id=7884553220
+18-02-2025 01:48:07 - Update id=418420669 is handled. Duration 123 ms by bot id=7884553220
+18-02-2025 01:48:08 - Update id=418420670 is handled. Duration 180 ms by bot id=7884553220
+18-02-2025 01:48:08 - Update id=418420671 is handled. Duration 62 ms by bot id=7884553220
+18-02-2025 01:52:11 - Polling stopped
+18-02-2025 01:52:11 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:58:18 - Start polling
+18-02-2025 01:58:18 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 01:58:55 - Update id=418420672 is handled. Duration 230 ms by bot id=7884553220
+18-02-2025 01:58:57 - Update id=418420673 is handled. Duration 142 ms by bot id=7884553220
+18-02-2025 01:59:00 - Update id=418420674 is handled. Duration 132 ms by bot id=7884553220
+18-02-2025 01:59:01 - Update id=418420675 is handled. Duration 180 ms by bot id=7884553220
+18-02-2025 01:59:04 - Update id=418420676 is handled. Duration 172 ms by bot id=7884553220
+18-02-2025 02:00:14 - Update id=418420677 is handled. Duration 174 ms by bot id=7884553220
+18-02-2025 02:08:58 - Polling stopped
+18-02-2025 02:08:59 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:09:04 - Start polling
+18-02-2025 02:09:04 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:09:08 - Update id=418420678 is handled. Duration 295 ms by bot id=7884553220
+18-02-2025 02:09:09 - Update id=418420679 is handled. Duration 144 ms by bot id=7884553220
+18-02-2025 02:09:10 - Update id=418420680 is handled. Duration 135 ms by bot id=7884553220
+18-02-2025 02:09:12 - Update id=418420681 is handled. Duration 62 ms by bot id=7884553220
+18-02-2025 02:09:14 - Update id=418420682 is handled. Duration 57 ms by bot id=7884553220
+18-02-2025 02:09:15 - Update id=418420683 is handled. Duration 59 ms by bot id=7884553220
+18-02-2025 02:15:03 - Polling stopped
+18-02-2025 02:15:04 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:15:09 - Start polling
+18-02-2025 02:15:10 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:15:18 - Update id=418420684 is handled. Duration 267 ms by bot id=7884553220
+18-02-2025 02:15:19 - 18-02-2025 02:15:19 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+18-02-2025 02:15:19 - Update id=418420685 is handled. Duration 147 ms by bot id=7884553220
+18-02-2025 02:15:21 - 18-02-2025 02:15:21 | User ID: 530420753 | Username: nonamelviv | Button: ⏸ Пауза
+18-02-2025 02:15:21 - Update id=418420686 is handled. Duration 184 ms by bot id=7884553220
+18-02-2025 02:15:23 - 18-02-2025 02:15:23 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Відновити
+18-02-2025 02:15:23 - Update id=418420687 is handled. Duration 148 ms by bot id=7884553220
+18-02-2025 02:15:25 - 18-02-2025 02:15:25 | User ID: 530420753 | Username: nonamelviv | Button: 🛑 Завершити
+18-02-2025 02:15:25 - Update id=418420688 is handled. Duration 183 ms by bot id=7884553220
+18-02-2025 02:15:26 - Update id=418420689 is handled. Duration 210 ms by bot id=7884553220
+18-02-2025 02:15:27 - Update id=418420690 is handled. Duration 151 ms by bot id=7884553220
+18-02-2025 02:15:30 - 18-02-2025 02:15:30 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+18-02-2025 02:15:30 - Update id=418420691 is handled. Duration 164 ms by bot id=7884553220
+18-02-2025 02:15:31 - 18-02-2025 02:15:31 | User ID: 530420753 | Username: nonamelviv | Button: 🛑 Завершити
+18-02-2025 02:15:31 - Update id=418420692 is handled. Duration 149 ms by bot id=7884553220
+18-02-2025 02:15:32 - Update id=418420693 is handled. Duration 154 ms by bot id=7884553220
+18-02-2025 02:15:33 - Update id=418420694 is handled. Duration 136 ms by bot id=7884553220
+18-02-2025 02:15:35 - Update id=418420695 is handled. Duration 138 ms by bot id=7884553220
+18-02-2025 02:15:36 - Update id=418420696 is handled. Duration 141 ms by bot id=7884553220
+18-02-2025 02:15:38 - Update id=418420697 is handled. Duration 57 ms by bot id=7884553220
+18-02-2025 02:15:42 - Update id=418420698 is handled. Duration 159 ms by bot id=7884553220
+18-02-2025 02:15:44 - Update id=418420699 is handled. Duration 57 ms by bot id=7884553220
+18-02-2025 02:16:04 - Polling stopped
+18-02-2025 02:16:04 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:16:09 - Start polling
+18-02-2025 02:16:10 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:16:15 - Update id=418420700 is handled. Duration 244 ms by bot id=7884553220
+18-02-2025 02:16:16 - 18-02-2025 02:16:16 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+18-02-2025 02:16:16 - Update id=418420701 is handled. Duration 147 ms by bot id=7884553220
+18-02-2025 02:16:18 - Update id=418420702 is handled. Duration 162 ms by bot id=7884553220
+18-02-2025 02:16:22 - Update id=418420703 is handled. Duration 134 ms by bot id=7884553220
+18-02-2025 02:16:36 - Update id=418420704 is handled. Duration 138 ms by bot id=7884553220
+18-02-2025 02:18:10 - Polling stopped
+18-02-2025 02:18:10 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:18:15 - Start polling
+18-02-2025 02:18:15 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:18:16 - Update id=418420705 is handled. Duration 265 ms by bot id=7884553220
+18-02-2025 02:18:17 - Update id=418420706 is handled. Duration 159 ms by bot id=7884553220
+18-02-2025 02:18:33 - Polling stopped
+18-02-2025 02:18:33 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:18:39 - Start polling
+18-02-2025 02:18:39 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:18:39 - Update id=418420707 is handled. Duration 241 ms by bot id=7884553220
+18-02-2025 02:18:40 - Update id=418420708 is handled. Duration 165 ms by bot id=7884553220
+18-02-2025 02:18:41 - Update id=418420709 is handled. Duration 134 ms by bot id=7884553220
+18-02-2025 02:18:46 - 18-02-2025 02:18:46 | User ID: 530420753 | Username: nonamelviv | Button: 🛑 Завершити
+18-02-2025 02:18:46 - Update id=418420710 is handled. Duration 149 ms by bot id=7884553220
+18-02-2025 02:18:48 - Update id=418420711 is handled. Duration 136 ms by bot id=7884553220
+18-02-2025 02:18:52 - Update id=418420712 is handled. Duration 135 ms by bot id=7884553220
+18-02-2025 02:18:56 - Update id=418420713 is handled. Duration 58 ms by bot id=7884553220
+18-02-2025 02:19:11 - Update id=418420714 is handled. Duration 176 ms by bot id=7884553220
+18-02-2025 02:19:12 - Update id=418420715 is handled. Duration 96 ms by bot id=7884553220
+18-02-2025 02:19:27 - Polling stopped
+18-02-2025 02:19:27 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:19:32 - Start polling
+18-02-2025 02:19:32 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:19:33 - Update id=418420716 is handled. Duration 249 ms by bot id=7884553220
+18-02-2025 02:19:34 - Update id=418420717 is handled. Duration 150 ms by bot id=7884553220
+18-02-2025 02:19:35 - Update id=418420718 is handled. Duration 150 ms by bot id=7884553220
+18-02-2025 02:19:36 - Update id=418420719 is handled. Duration 162 ms by bot id=7884553220
+18-02-2025 02:19:37 - Update id=418420720 is handled. Duration 143 ms by bot id=7884553220
+18-02-2025 02:21:33 - Polling stopped
+18-02-2025 02:21:33 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:21:38 - Start polling
+18-02-2025 02:21:38 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:21:39 - Update id=418420721 is handled. Duration 174 ms by bot id=7884553220
+18-02-2025 02:21:41 - Update id=418420722 is handled. Duration 155 ms by bot id=7884553220
+18-02-2025 02:21:44 - Update id=418420723 is handled. Duration 152 ms by bot id=7884553220
+18-02-2025 02:21:47 - Update id=418420724 is handled. Duration 141 ms by bot id=7884553220
+18-02-2025 02:21:48 - Update id=418420725 is handled. Duration 145 ms by bot id=7884553220
+18-02-2025 02:22:08 - Polling stopped
+18-02-2025 02:22:09 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:22:14 - Start polling
+18-02-2025 02:22:14 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:22:16 - Update id=418420726 is not handled. Duration 2 ms by bot id=7884553220
+18-02-2025 02:22:22 - Update id=418420727 is handled. Duration 311 ms by bot id=7884553220
+18-02-2025 02:22:24 - Update id=418420728 is handled. Duration 137 ms by bot id=7884553220
+18-02-2025 02:22:28 - Update id=418420729 is handled. Duration 148 ms by bot id=7884553220
+18-02-2025 02:22:29 - Update id=418420730 is handled. Duration 139 ms by bot id=7884553220
+18-02-2025 02:22:30 - Update id=418420731 is handled. Duration 156 ms by bot id=7884553220
+18-02-2025 02:22:35 - Update id=418420732 is handled. Duration 160 ms by bot id=7884553220
+18-02-2025 02:22:36 - Update id=418420733 is handled. Duration 151 ms by bot id=7884553220
+18-02-2025 02:22:37 - Update id=418420734 is handled. Duration 134 ms by bot id=7884553220
+18-02-2025 02:31:33 - Polling stopped
+18-02-2025 02:31:33 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:31:38 - Start polling
+18-02-2025 02:31:38 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:31:44 - 18-02-2025 02:31:44 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+18-02-2025 02:31:44 - Update id=418420735 is handled. Duration 246 ms by bot id=7884553220
+18-02-2025 02:31:46 - Update id=418420736 is handled. Duration 134 ms by bot id=7884553220
+18-02-2025 02:31:47 - Update id=418420737 is handled. Duration 141 ms by bot id=7884553220
+18-02-2025 02:31:48 - Update id=418420738 is not handled. Duration 1 ms by bot id=7884553220
+18-02-2025 02:31:48 - Cause exception while process update id=418420738 by bot id=7884553220
+AttributeError: 'FSMContext' object has no attribute 'finish'
+Traceback (most recent call last):
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 306, in handle_worker_choice
+    await state.finish()
+          ^^^^^^^^^^^^
+AttributeError: 'FSMContext' object has no attribute 'finish'
+18-02-2025 02:32:02 - Update id=418420739 is not handled. Duration 1 ms by bot id=7884553220
+18-02-2025 02:32:02 - Cause exception while process update id=418420739 by bot id=7884553220
+AttributeError: 'FSMContext' object has no attribute 'finish'
+Traceback (most recent call last):
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 306, in handle_worker_choice
+    await state.finish()
+          ^^^^^^^^^^^^
+AttributeError: 'FSMContext' object has no attribute 'finish'
+18-02-2025 02:32:03 - Update id=418420740 is not handled. Duration 1 ms by bot id=7884553220
+18-02-2025 02:32:03 - Cause exception while process update id=418420740 by bot id=7884553220
+AttributeError: 'FSMContext' object has no attribute 'finish'
+Traceback (most recent call last):
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 306, in handle_worker_choice
+    await state.finish()
+          ^^^^^^^^^^^^
+AttributeError: 'FSMContext' object has no attribute 'finish'
+18-02-2025 02:32:03 - Update id=418420741 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:32:05 - Update id=418420742 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:32:19 - Update id=418420743 is not handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:32:19 - Cause exception while process update id=418420743 by bot id=7884553220
+AttributeError: 'FSMContext' object has no attribute 'finish'
+Traceback (most recent call last):
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 306, in handle_worker_choice
+    await state.finish()
+          ^^^^^^^^^^^^
+AttributeError: 'FSMContext' object has no attribute 'finish'
+18-02-2025 02:32:27 - Update id=418420744 is handled. Duration 148 ms by bot id=7884553220
+18-02-2025 02:32:31 - Update id=418420745 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:32:32 - Update id=418420746 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:32:33 - Update id=418420747 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:33:31 - Polling stopped
+18-02-2025 02:33:31 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:33:36 - Start polling
+18-02-2025 02:33:37 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:33:37 - Update id=418420748 is handled. Duration 245 ms by bot id=7884553220
+18-02-2025 02:33:39 - Update id=418420749 is handled. Duration 142 ms by bot id=7884553220
+18-02-2025 02:33:40 - Update id=418420750 is not handled. Duration 1 ms by bot id=7884553220
+18-02-2025 02:33:40 - Cause exception while process update id=418420750 by bot id=7884553220
+AttributeError: 'FSMContext' object has no attribute 'finish'
+Traceback (most recent call last):
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 306, in handle_worker_choice
+    await state.finish()
+          ^^^^^^^^^^^^
+AttributeError: 'FSMContext' object has no attribute 'finish'
+18-02-2025 02:36:04 - Polling stopped
+18-02-2025 02:36:05 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:36:10 - Start polling
+18-02-2025 02:36:10 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:36:10 - Update id=418420751 is handled. Duration 267 ms by bot id=7884553220
+18-02-2025 02:36:12 - Update id=418420752 is handled. Duration 138 ms by bot id=7884553220
+18-02-2025 02:36:13 - Update id=418420753 is handled. Duration 172 ms by bot id=7884553220
+18-02-2025 02:36:15 - Update id=418420754 is handled. Duration 86 ms by bot id=7884553220
+18-02-2025 02:38:05 - Polling stopped
+18-02-2025 02:38:05 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:38:10 - Start polling
+18-02-2025 02:38:11 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:38:11 - 18-02-2025 02:38:11 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+18-02-2025 02:38:11 - Update id=418420755 is handled. Duration 173 ms by bot id=7884553220
+18-02-2025 02:38:13 - Update id=418420756 is handled. Duration 140 ms by bot id=7884553220
+18-02-2025 02:38:14 - Update id=418420757 is handled. Duration 186 ms by bot id=7884553220
+18-02-2025 02:38:15 - Update id=418420758 is handled. Duration 148 ms by bot id=7884553220
+18-02-2025 02:38:17 - Update id=418420759 is handled. Duration 83 ms by bot id=7884553220
+18-02-2025 02:39:13 - Polling stopped
+18-02-2025 02:39:13 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:39:19 - Start polling
+18-02-2025 02:39:19 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:39:19 - 18-02-2025 02:39:19 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+18-02-2025 02:39:20 - Update id=418420760 is handled. Duration 165 ms by bot id=7884553220
+18-02-2025 02:39:21 - Update id=418420761 is handled. Duration 143 ms by bot id=7884553220
+18-02-2025 02:39:22 - Update id=418420762 is handled. Duration 143 ms by bot id=7884553220
+18-02-2025 02:39:23 - Update id=418420763 is handled. Duration 138 ms by bot id=7884553220
+18-02-2025 02:39:25 - Update id=418420764 is handled. Duration 152 ms by bot id=7884553220
+18-02-2025 02:39:26 - Update id=418420765 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:39:32 - Update id=418420766 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:39:39 - Update id=418420767 is handled. Duration 144 ms by bot id=7884553220
+18-02-2025 02:39:41 - Update id=418420768 is handled. Duration 177 ms by bot id=7884553220
+18-02-2025 02:39:41 - Update id=418420769 is handled. Duration 140 ms by bot id=7884553220
+18-02-2025 02:39:43 - Update id=418420770 is handled. Duration 150 ms by bot id=7884553220
+18-02-2025 02:39:44 - Update id=418420771 is handled. Duration 0 ms by bot id=7884553220
+18-02-2025 02:42:07 - Polling stopped
+18-02-2025 02:42:07 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:42:13 - Start polling
+18-02-2025 02:42:13 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:42:13 - Update id=418420772 is handled. Duration 241 ms by bot id=7884553220
+18-02-2025 02:42:15 - Update id=418420773 is handled. Duration 143 ms by bot id=7884553220
+18-02-2025 02:42:16 - Update id=418420774 is handled. Duration 145 ms by bot id=7884553220
+18-02-2025 02:42:18 - Update id=418420775 is handled. Duration 154 ms by bot id=7884553220
+18-02-2025 02:42:19 - Update id=418420776 is handled. Duration 1 ms by bot id=7884553220
+18-02-2025 02:42:55 - Polling stopped
+18-02-2025 02:42:56 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:43:01 - Start polling
+18-02-2025 02:43:01 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:43:01 - Update id=418420777 is not handled. Duration 3 ms by bot id=7884553220
+18-02-2025 02:43:03 - Update id=418420778 is not handled. Duration 3 ms by bot id=7884553220
+18-02-2025 02:43:06 - Polling stopped
+18-02-2025 02:43:06 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:43:12 - Start polling
+18-02-2025 02:43:12 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:43:13 - Update id=418420779 is not handled. Duration 3 ms by bot id=7884553220
+18-02-2025 02:43:16 - Update id=418420780 is handled. Duration 246 ms by bot id=7884553220
+18-02-2025 02:43:17 - Update id=418420781 is not handled. Duration 3 ms by bot id=7884553220
+18-02-2025 02:43:17 - Cause exception while process update id=418420781 by bot id=7884553220
+AttributeError: 'FSMContext' object has no attribute 'finish'
+Traceback (most recent call last):
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 426, in button_report
+    await start_report(message, state)
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 311, in start_report
+    await state.finish()
+          ^^^^^^^^^^^^
+AttributeError: 'FSMContext' object has no attribute 'finish'
+18-02-2025 02:45:44 - Polling stopped
+18-02-2025 02:45:44 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:45:49 - Start polling
+18-02-2025 02:45:49 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:45:50 - Update id=418420782 is handled. Duration 257 ms by bot id=7884553220
+18-02-2025 02:45:53 - Update id=418420783 is handled. Duration 187 ms by bot id=7884553220
+18-02-2025 02:45:55 - Update id=418420784 is handled. Duration 183 ms by bot id=7884553220
+18-02-2025 02:46:31 - Update id=418420785 is handled. Duration 160 ms by bot id=7884553220
+18-02-2025 02:46:32 - Update id=418420786 is handled. Duration 148 ms by bot id=7884553220
+18-02-2025 02:46:37 - Update id=418420787 is handled. Duration 150 ms by bot id=7884553220
+18-02-2025 02:46:38 - Update id=418420788 is handled. Duration 149 ms by bot id=7884553220
+18-02-2025 02:46:40 - Update id=418420789 is not handled. Duration 3 ms by bot id=7884553220
+18-02-2025 02:46:43 - Update id=418420790 is not handled. Duration 3 ms by bot id=7884553220
+18-02-2025 02:46:52 - Update id=418420791 is not handled. Duration 2 ms by bot id=7884553220
+18-02-2025 02:46:59 - Update id=418420792 is handled. Duration 167 ms by bot id=7884553220
+18-02-2025 02:47:00 - Update id=418420793 is handled. Duration 147 ms by bot id=7884553220
+18-02-2025 02:47:04 - Update id=418420794 is handled. Duration 197 ms by bot id=7884553220
+18-02-2025 02:47:05 - Update id=418420795 is handled. Duration 159 ms by bot id=7884553220
+18-02-2025 02:47:07 - Update id=418420796 is handled. Duration 144 ms by bot id=7884553220
+18-02-2025 02:47:08 - Update id=418420797 is handled. Duration 154 ms by bot id=7884553220
+18-02-2025 02:47:09 - Update id=418420798 is handled. Duration 152 ms by bot id=7884553220
+18-02-2025 02:49:17 - Polling stopped
+18-02-2025 02:49:17 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:49:22 - Start polling
+18-02-2025 02:49:22 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:49:25 - Update id=418420799 is handled. Duration 233 ms by bot id=7884553220
+18-02-2025 02:49:26 - Update id=418420800 is not handled. Duration 3 ms by bot id=7884553220
+18-02-2025 02:49:26 - Cause exception while process update id=418420800 by bot id=7884553220
+NameError: name 'start_report' is not defined
+Traceback (most recent call last):
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\DESSEE\tg-time-tracker\bot\handlers.py", line 448, in button_report
+    await start_report(message, state)
+          ^^^^^^^^^^^^
+NameError: name 'start_report' is not defined. Did you mean: 'start_work'?
+18-02-2025 02:49:59 - Polling stopped
+18-02-2025 02:49:59 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:50:04 - Start polling
+18-02-2025 02:50:04 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:50:05 - Update id=418420801 is handled. Duration 287 ms by bot id=7884553220
+18-02-2025 02:50:07 - Update id=418420802 is handled. Duration 150 ms by bot id=7884553220
+18-02-2025 02:50:08 - Update id=418420803 is handled. Duration 141 ms by bot id=7884553220
+18-02-2025 02:50:10 - Update id=418420804 is handled. Duration 176 ms by bot id=7884553220
+18-02-2025 02:50:12 - Update id=418420805 is handled. Duration 203 ms by bot id=7884553220
+18-02-2025 02:50:13 - 18-02-2025 02:50:13 | User ID: 530420753 | Username: nonamelviv | Button: ▶️ Почати роботу
+18-02-2025 02:50:13 - Update id=418420806 is handled. Duration 163 ms by bot id=7884553220
+18-02-2025 02:50:14 - 18-02-2025 02:50:14 | User ID: 530420753 | Username: nonamelviv | Button: 🛑 Завершити
+18-02-2025 02:50:15 - Update id=418420807 is handled. Duration 156 ms by bot id=7884553220
+18-02-2025 02:50:16 - Update id=418420808 is handled. Duration 212 ms by bot id=7884553220
+18-02-2025 02:50:18 - Update id=418420809 is handled. Duration 144 ms by bot id=7884553220
+18-02-2025 02:50:22 - Update id=418420810 is handled. Duration 143 ms by bot id=7884553220
+18-02-2025 02:50:24 - Update id=418420811 is handled. Duration 156 ms by bot id=7884553220
+18-02-2025 02:51:11 - Polling stopped
+18-02-2025 02:51:11 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:51:16 - Start polling
+18-02-2025 02:51:17 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:51:18 - Update id=418420812 is handled. Duration 248 ms by bot id=7884553220
+18-02-2025 02:51:19 - Update id=418420813 is handled. Duration 141 ms by bot id=7884553220
+18-02-2025 02:51:21 - Update id=418420814 is handled. Duration 142 ms by bot id=7884553220
+18-02-2025 02:51:32 - Polling stopped
+18-02-2025 02:51:33 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:51:38 - Start polling
+18-02-2025 02:51:38 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:51:52 - Update id=418420815 is handled. Duration 236 ms by bot id=7884553220
+18-02-2025 02:51:53 - Update id=418420816 is handled. Duration 144 ms by bot id=7884553220
+18-02-2025 02:51:55 - Update id=418420817 is handled. Duration 133 ms by bot id=7884553220
+18-02-2025 02:52:12 - Polling stopped
+18-02-2025 02:52:12 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:52:17 - Start polling
+18-02-2025 02:52:17 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:52:18 - Update id=418420818 is handled. Duration 239 ms by bot id=7884553220
+18-02-2025 02:52:19 - Update id=418420819 is handled. Duration 150 ms by bot id=7884553220
+18-02-2025 02:52:22 - Update id=418420820 is handled. Duration 143 ms by bot id=7884553220
+18-02-2025 02:54:26 - Polling stopped
+18-02-2025 02:54:26 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:54:32 - Start polling
+18-02-2025 02:54:32 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:54:32 - Update id=418420821 is handled. Duration 242 ms by bot id=7884553220
+18-02-2025 02:54:34 - Update id=418420822 is handled. Duration 138 ms by bot id=7884553220
+18-02-2025 02:54:35 - Update id=418420823 is handled. Duration 155 ms by bot id=7884553220
+18-02-2025 02:54:37 - Update id=418420824 is handled. Duration 144 ms by bot id=7884553220
+18-02-2025 02:54:38 - Update id=418420825 is handled. Duration 134 ms by bot id=7884553220
+18-02-2025 02:57:27 - Polling stopped
+18-02-2025 02:57:27 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:57:32 - Start polling
+18-02-2025 02:57:32 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 02:57:33 - Update id=418420826 is handled. Duration 229 ms by bot id=7884553220
+18-02-2025 02:57:34 - Update id=418420827 is handled. Duration 143 ms by bot id=7884553220
+18-02-2025 02:57:35 - Update id=418420828 is handled. Duration 67 ms by bot id=7884553220
+18-02-2025 06:58:32 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+18-02-2025 06:58:32 - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7884553220)
+18-02-2025 06:58:33 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+18-02-2025 06:58:33 - Sleep for 1.333680 seconds and try again... (tryings = 1, bot id = 7884553220)
+18-02-2025 06:58:34 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+18-02-2025 06:58:34 - Sleep for 1.803973 seconds and try again... (tryings = 2, bot id = 7884553220)
+18-02-2025 06:58:36 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+18-02-2025 06:58:36 - Sleep for 2.461180 seconds and try again... (tryings = 3, bot id = 7884553220)
+18-02-2025 12:32:48 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+18-02-2025 12:32:48 - Sleep for 3.300310 seconds and try again... (tryings = 4, bot id = 7884553220)
+18-02-2025 12:32:51 - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+18-02-2025 12:32:51 - Sleep for 4.393408 seconds and try again... (tryings = 5, bot id = 7884553220)
+18-02-2025 12:33:18 - Connection established (tryings = 6, bot id = 7884553220)
+18-02-2025 16:15:26 - Update id=418420829 is handled. Duration 261 ms by bot id=7884553220
+18-02-2025 16:15:32 - Update id=418420830 is handled. Duration 417 ms by bot id=7884553220
+18-02-2025 16:15:34 - Update id=418420831 is handled. Duration 78 ms by bot id=7884553220
+18-02-2025 16:15:35 - Update id=418420832 is handled. Duration 70 ms by bot id=7884553220
+18-02-2025 16:15:44 - Polling stopped
+18-02-2025 16:15:44 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 16:16:01 - Start polling
+18-02-2025 16:16:01 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 16:16:05 - Update id=418420833 is handled. Duration 243 ms by bot id=7884553220
+18-02-2025 16:16:08 - Update id=418420834 is handled. Duration 389 ms by bot id=7884553220
+18-02-2025 16:16:10 - Update id=418420835 is handled. Duration 272 ms by bot id=7884553220
+18-02-2025 16:16:12 - Update id=418420836 is handled. Duration 157 ms by bot id=7884553220
+18-02-2025 16:16:13 - Update id=418420837 is handled. Duration 163 ms by bot id=7884553220
+18-02-2025 16:16:14 - Update id=418420838 is handled. Duration 170 ms by bot id=7884553220
+18-02-2025 16:16:15 - Update id=418420839 is handled. Duration 189 ms by bot id=7884553220
+18-02-2025 16:20:47 - Polling stopped
+18-02-2025 16:20:48 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 16:20:53 - Start polling
+18-02-2025 16:20:53 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 16:20:55 - Update id=418420840 is handled. Duration 280 ms by bot id=7884553220
+18-02-2025 16:20:56 - Update id=418420841 is handled. Duration 179 ms by bot id=7884553220
+18-02-2025 16:20:59 - Update id=418420842 is handled. Duration 172 ms by bot id=7884553220
+18-02-2025 16:21:00 - Update id=418420843 is handled. Duration 181 ms by bot id=7884553220
+18-02-2025 16:21:03 - Update id=418420844 is handled. Duration 738 ms by bot id=7884553220
+18-02-2025 16:21:27 - Polling stopped
+18-02-2025 16:21:27 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 16:21:32 - Start polling
+18-02-2025 16:21:33 - Run polling for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'
+18-02-2025 16:21:34 - Update id=418420845 is handled. Duration 241 ms by bot id=7884553220
+18-02-2025 16:21:39 - Update id=418420846 is handled. Duration 219 ms by bot id=7884553220
+18-02-2025 16:21:40 - Update id=418420847 is handled. Duration 253 ms by bot id=7884553220
+18-02-2025 16:21:41 - Update id=418420848 is handled. Duration 145 ms by bot id=7884553220
+18-02-2025 16:21:42 - Update id=418420849 is handled. Duration 76 ms by bot id=7884553220
+18-02-2025 16:23:57 - Polling stopped
+18-02-2025 16:23:57 - Polling stopped for bot @tg_time_tracker_bot id=7884553220 - 'TimeTrackerBot'

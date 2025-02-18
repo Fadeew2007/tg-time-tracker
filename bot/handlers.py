@@ -12,11 +12,9 @@ from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 from bot.config import API_URL
 
-# Ініціалізація роутера
 router = Router()
 user_tokens = {}
 
-# Налаштування логування
 logging.basicConfig(
     filename="button_logs.txt",
     level=logging.INFO,
@@ -24,14 +22,12 @@ logging.basicConfig(
     datefmt="%d-%m-%Y %H:%M:%S"
 )
 
-# Часовий пояс Києва
 kyiv_tz = pytz.timezone("Europe/Kyiv")
 
 def log_button_press(user_id, username, button_text):
-    """Функція запису натискань кнопок у лог"""
     log_entry = f"{datetime.now(kyiv_tz).strftime('%d-%m-%Y %H:%M:%S')} | User ID: {user_id} | Username: {username} | Button: {button_text}"
     logging.info(log_entry)
-    print(log_entry)  # Вивід у консоль для зручності
+    print(log_entry)
 
 class ReportState(StatesGroup):
     choosing_worker = State()
@@ -50,7 +46,6 @@ async def start(message: types.Message):
         data = response.json()
         user_tokens[telegram_id] = data["token"]
 
-        # Створюємо клавіатуру з кнопками
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="▶️ Почати роботу")],
@@ -64,8 +59,8 @@ async def start(message: types.Message):
             "🍰 Вітаємо в DESSEE!\n\n"
             "📌 Команди:\n"
             "▶️ Почати роботу – розпочати зміну\n"
-            "⏸ Пауза – поставити роботу на паузу\n"
-            "▶️ Відновити – продовжити роботу після паузи\n"
+            "⏸ Пауза – піти на перерву\n"
+            "▶️ Відновити – продовжити роботу після перерви\n"
             "🛑 Завершити – завершити зміну\n\n"
             "📊 Мої години – переглянути свої робочі години\n\n"
             "📋 Звіт – для адмінів\n\n"
@@ -91,7 +86,6 @@ async def start_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        # Оновлюємо клавіатуру після старту роботи
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="⏸ Пауза"), KeyboardButton(text="🛑 Завершити")],
@@ -119,7 +113,6 @@ async def pause_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        # Оновлюємо клавіатуру після паузи роботи
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="▶️ Відновити"), KeyboardButton(text="🛑 Завершити")],
@@ -147,7 +140,6 @@ async def resume_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        # Оновлюємо клавіатуру після відновлення роботи
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="⏸ Пауза"), KeyboardButton(text="🛑 Завершити")],
@@ -175,7 +167,6 @@ async def stop_work(message: types.Message):
     data = response.json()
 
     if response.status_code == 200:
-        # Оновлюємо клавіатуру після завершення роботи
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="▶️ Почати роботу")],
@@ -219,7 +210,6 @@ async def my_hours(message: types.Message):
     else:
         await message.answer("❌ Помилка отримання годин.")@router.message(Command("my_hours"))
 async def my_hours(message: types.Message):
-    """Отримує години поточного місяця та виводить кнопку '⬅️ Назад'"""
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
 
@@ -238,7 +228,6 @@ async def my_hours(message: types.Message):
         summary = data["summary"]
         days_list = "\n".join(data["days"])
 
-        # Додаємо кнопку "⬅️ Назад"
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="⬅️ Назад")]
@@ -252,7 +241,6 @@ async def my_hours(message: types.Message):
 
 @router.message(F.text == "⬅️ Назад")
 async def go_back(message: types.Message):
-    """Перевіряє, чи є активна сесія, і повертає відповідні кнопки"""
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
 
@@ -260,33 +248,86 @@ async def go_back(message: types.Message):
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
         return
 
-    # Отримуємо статус активної сесії
     response = requests.get(f"{API_URL}active_session/", headers={"Authorization": f"Token {token}"})
     data = response.json()
 
     if response.status_code == 200 and data.get("active", False):
-        # Якщо сесія активна, показуємо кнопки для паузи або завершення
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="⏸ Пауза"), KeyboardButton(text="🛑 Завершити")],
-                [KeyboardButton(text="📋 Звіт")],
-                [KeyboardButton(text="📊 Мої години")]
+                [KeyboardButton(text="📊 Мої години")],
+                [KeyboardButton(text="📋 Звіт")]
             ],
             resize_keyboard=True
         )
     else:
-        # Якщо сесія неактивна, показуємо кнопку початку роботи
         keyboard = ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton(text="▶️ Почати роботу")],
-                [KeyboardButton(text="📋 Звіт")],
-                [KeyboardButton(text="📊 Мої години")]
+                [KeyboardButton(text="📊 Мої години")],
+                [KeyboardButton(text="📋 Звіт")]
             ],
             resize_keyboard=True
         )
 
     await message.answer("🔙 Повернення в головне меню:", reply_markup=keyboard)
 
+@router.message(ReportState.choosing_worker)
+async def handle_worker_choice(message: types.Message, state: FSMContext):
+    # Якщо натиснуто кнопку повернення ("⬅️ Назад" або "все")
+    if message.text in ["В головне меню"]:
+        await state.clear()  # Очищення/скидання стану
+        telegram_id = message.from_user.id
+        token = user_tokens.get(telegram_id)
+        if not token:
+            await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
+            return
+
+        response = requests.get(f"{API_URL}active_session/", headers={"Authorization": f"Token {token}"})
+        data = response.json()
+        if response.status_code == 200 and data.get("active", False):
+            keyboard = ReplyKeyboardMarkup(
+                keyboard=[
+                    [KeyboardButton(text="⏸ Пауза"), KeyboardButton(text="🛑 Завершити")],
+                    [KeyboardButton(text="📊 Мої години")],
+                    [KeyboardButton(text="📋 Звіт")]
+                ],
+                resize_keyboard=True
+            )
+        else:
+            keyboard = ReplyKeyboardMarkup(
+                keyboard=[
+                    [KeyboardButton(text="▶️ Почати роботу")],
+                    [KeyboardButton(text="📊 Мої години")],
+                    [KeyboardButton(text="📋 Звіт")]
+                ],
+                resize_keyboard=True
+            )
+        await message.answer("🔙 Повернення в головне меню:", reply_markup=keyboard)
+        return
+
+    # Якщо натиснуто кнопку з ім'ям працівника, отримуємо дані стану
+    data = await state.get_data()
+    worker = next((w for w in data.get("workers", []) if w["name"] == message.text), None)
+    if not worker:
+        await message.answer("❌ Невірний вибір, спробуйте ще раз.")
+        return
+
+    # Якщо працівника знайдено – переходимо до вибору року
+    telegram_id = message.from_user.id
+    token = user_tokens.get(telegram_id)
+    response = requests.get(f"{API_URL}admin/years/{worker['id']}/", headers={"Authorization": f"Token {token}"})
+    if response.status_code == 200 and response.json():
+        years = response.json()
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[[KeyboardButton(text=str(year))] for year in years],
+            resize_keyboard=True,
+        )
+        await state.set_state(ReportState.choosing_year)
+        await state.update_data(worker=worker)
+        await message.answer("📅 Оберіть рік:", reply_markup=keyboard)
+    else:
+        await message.answer("❌ Немає даних за жоден рік.")
 
 @router.message(Command("report"))
 async def start_report(message: types.Message, state: FSMContext):
@@ -301,9 +342,8 @@ async def start_report(message: types.Message, state: FSMContext):
     if response.status_code == 200 and response.json():
         workers = response.json()
         keyboard = ReplyKeyboardMarkup(
-            keyboard=[[KeyboardButton(text=worker["name"])] for worker in workers],
+            keyboard=[[KeyboardButton(text=worker["name"])] for worker in workers] + [[KeyboardButton(text="В головне меню")]],
             resize_keyboard=True,
-            one_time_keyboard=True
         )
         await state.set_state(ReportState.choosing_worker)
         await state.update_data(workers=workers)
@@ -314,9 +354,7 @@ async def start_report(message: types.Message, state: FSMContext):
             error = data.get("error", "❌ Немає доступних працівників.")
         except Exception:
             error = "❌ Немає доступних працівників."
-        # Якщо користувач не адмін, API поверне "🚫 У вас немає прав."
         await message.answer(error)
-
 
 @router.message(ReportState.choosing_worker)
 async def choose_year(message: types.Message, state: FSMContext):
@@ -335,8 +373,7 @@ async def choose_year(message: types.Message, state: FSMContext):
         years = response.json()
         keyboard = ReplyKeyboardMarkup(
             keyboard=[[KeyboardButton(text=str(year))] for year in years],
-            resize_keyboard=True,
-            one_time_keyboard=True
+            resize_keyboard=True
         )
         await state.set_state(ReportState.choosing_year)
         await state.update_data(worker=worker)
@@ -358,8 +395,7 @@ async def choose_month(message: types.Message, state: FSMContext):
         months = response.json()
         keyboard = ReplyKeyboardMarkup(
             keyboard=[[KeyboardButton(text=str(month))] for month in months],
-            resize_keyboard=True,
-            one_time_keyboard=True
+            resize_keyboard=True
         )
         await state.set_state(ReportState.choosing_month)
         await state.update_data(year=year)
