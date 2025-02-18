@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.http import JsonResponse
-from django.urls import path
+from django.urls import path, get_resolver
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from .views import StartWork, PauseWork, ResumeWork, StopWork, MyHours, TelegramAuth, AdminReport, AvailableWorkers, AvailableYears, AvailableMonths, MonthlyReport, ActiveSession
+from .views import StartWork, PauseWork, ResumeWork, StopWork, MyHours, TelegramAuth, AdminReport, AvailableWorkers, AvailableYears, AvailableMonths, MonthlyReport, ActiveSession, ExportExcelReport
 
 def home(request):
     return JsonResponse({"message": "API is working!"})
@@ -24,4 +24,9 @@ urlpatterns = [
     path("api/admin/months/<int:user_id>/<int:year>/", AvailableMonths.as_view(), name="available_months"),
     path("api/admin/report/<int:user_id>/<int:year>/<int:month>/", MonthlyReport.as_view(), name="monthly_report"),
     path("api/active_session/", ActiveSession.as_view(), name="active_session"),
+    path("api/admin/export_excel/<int:year>/<int:month>/", ExportExcelReport.as_view(), name="export_excel"),
 ]
+
+print("DEBUG: Виводимо всі URL Django")
+for url in get_resolver().url_patterns:
+    print(f"DEBUG: {url}")

@@ -2,6 +2,9 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 import pytz
 from babel.dates import format_date
+import pandas as pd
+from io import BytesIO
+from django.http import HttpResponse
 
 
 from django.db.models import Count, Sum
@@ -318,3 +321,49 @@ class ActiveSession(APIView):
     def get(self, request):
         active_session = WorkSession.objects.filter(user=request.user, status="active").exists()
         return Response({"active": active_session})
+    
+class ExportExcelReport(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, year, month):
+        print(f"DEBUG: Отримано запит на експорт {year}-{month} від {request.user}")
+
+
+        if request.user.role != "admin":
+            return Response({"error": "🚫 Доступ дозволено лише адміністратору."}, status=403)
+
+        # Отримуємо всіх користувачів
+        users = User.objects.filter(worksession__start_time__year=year, worksession__start_time__month=month).distinct()
+
+        # Отримуємо всі робочі сесії
+        sessions = WorkSession.objects.filter(start_time__year=year, start_time__month=month)
+
+        # Формуємо структуру для DataFrame
+        data = {}
+        for user in users:
+            user_sessions = sessions.filter(user=user)
+            user_hours = {day: 0 for day in range(1, 32)}
+
+            for session in user_sessions:
+                start_day = session.start_time.day
+                work_duration = session.end_time - session.start_time if session.end_time else timedelta(0)
+                user_hours[start_day] += round(work_duration.total_seconds() / 3600, 2)  # Години
+
+            data[f"{user.first_name} {user.last_name}"] = list(user_hours.values())
+
+        # Створення DataFrame
+        df = pd.DataFrame(data, index=[f"{day}.{month}.{year}" for day in range(1, 32)])
+
+        # Генерація Excel
+        output = BytesIO()
+        with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
+            df.to_excel(writer, sheet_name="Звіт")
+            writer.book.close()
+
+        response = HttpResponse(
+            output.getvalue(),
+            content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
+        response["Content-Disposition"] = f'attachment; filename="report_{month}_{year}.xlsx"'
+
+        return response

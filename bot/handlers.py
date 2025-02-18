@@ -8,7 +8,7 @@ from aiogram import F, Router, types
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, FSInputFile
 
 from bot.config import API_URL
 
@@ -407,18 +407,38 @@ async def choose_month(message: types.Message, state: FSMContext):
 @router.message(ReportState.choosing_month)
 async def show_report(message: types.Message, state: FSMContext):
     data = await state.get_data()
-    worker, year, month = data["worker"], data["year"], message.text
+    worker = data.get("worker")
+    year = data.get("year")
+    month = message.text  # Місяць береться з повідомлення
+
+    if not worker or not year or not month:
+        await message.answer("❌ Сталася помилка. Спробуйте ще раз.")
+        return
 
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
 
     response = requests.get(f"{API_URL}admin/report/{worker['id']}/{year}/{month}/", headers={"Authorization": f"Token {token}"})
-    
+
+    temp_data = {"year": year, "month": month}
+
     await state.clear()
+
+    await state.update_data(temp_data)
 
     if response.status_code == 200:
         report = response.json().get("report", "❌ Дані відсутні.")
-        await message.answer(report)
+
+        # Додаємо кнопку для завантаження Excel
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="📥 Завантажити Excel")],  # Ось нова кнопка
+                [KeyboardButton(text="⬅️ Назад")]
+            ],
+            resize_keyboard=True
+        )
+
+        await message.answer(report, reply_markup=keyboard)
     else:
         await message.answer("❌ Помилка отримання звіту.")
 
@@ -445,3 +465,57 @@ async def button_my_hours(message: types.Message):
 @router.message(F.text == "📋 Звіт")
 async def button_report(message: types.Message, state: FSMContext):
     await start_report(message, state)
+
+@router.message(F.text == "📥 Завантажити Excel")
+async def download_excel_report(message: types.Message, state: FSMContext):
+    data = await state.get_data()
+    year, month = data.get("year"), data.get("month")
+
+    print(f"DEBUG: Year={year}, Month={month}")
+
+    if not year or not month:
+        await message.answer("❌ Спершу оберіть рік і місяць для звіту.")
+        return
+
+    telegram_id = message.from_user.id
+    token = user_tokens.get(telegram_id)
+
+    if not token:
+        await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
+        return
+
+    file_url = f"{API_URL}admin/export_excel/{year}/{month}/"
+    headers = {"Authorization": f"Token {token}"}
+
+    print(f"DEBUG: Запит до {file_url} з headers={headers}")  # Лог запиту
+
+    response = requests.get(file_url, headers=headers)
+
+    print(f"DEBUG: Статус код = {response.status_code}")
+
+    if response.status_code == 200:
+        file_path = f"звіт_годин_за_{month}_{year}.xlsx"
+
+        with open(file_path, "wb") as file:
+            file.write(response.content)
+
+        print(f"DEBUG: Файл збережено як {file_path}")
+
+        import os
+        if os.path.exists(file_path):
+            print(f"DEBUG: Файл {file_path} існує, пробуємо відправити")
+        else:
+            print(f"ERROR: Файл {file_path} не знайдено!")
+            await message.answer("❌ Помилка: Файл не знайдено після завантаження.")
+            return
+
+        # Відправляємо файл в Telegram через FSInputFile
+        try:
+            document = FSInputFile(file_path)  # Ось тут ми правильно передаємо файл
+            await message.answer_document(document)
+            print("DEBUG: Файл успішно надіслано у Telegram")
+        except Exception as e:
+            print(f"ERROR: Не вдалося відправити файл. Помилка: {e}")
+            await message.answer(f"❌ Помилка відправлення файлу: {e}")
+    else:
+        await message.answer("❌ Не вдалося отримати файл.")
