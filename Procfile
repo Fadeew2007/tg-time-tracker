@@ -1,1 +1,1 @@
-worker: PYTHONPATH=. python -m bot.bot
+worker: PYTHONPATH=/app python -m bot.bot
