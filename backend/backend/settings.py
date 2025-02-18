@@ -21,9 +21,11 @@ PORT = os.getenv("PORT", "8080")
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
+    "profound-wholeness-production-b760.up.railway.app",
     os.getenv("RAILWAY_PRIVATE_DOMAIN", ""),
-    os.getenv("RAILWAY_PUBLIC_DOMAIN", ""),  # Додай сюди значення, якщо з'явиться публічний домен
+    os.getenv("RAILWAY_PUBLIC_DOMAIN", ""),
 ]
+
 
 # -------------------------------
 # 3️⃣ Встановлені додатки
