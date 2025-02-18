@@ -22,6 +22,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     os.getenv("RAILWAY_PRIVATE_DOMAIN", ""),
+    os.getenv("RAILWAY_PUBLIC_DOMAIN", ""),  # Додай сюди значення, якщо з'явиться публічний домен
 ]
 
 # -------------------------------
