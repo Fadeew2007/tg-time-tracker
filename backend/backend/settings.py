@@ -26,6 +26,10 @@ ALLOWED_HOSTS = [
     os.getenv("RAILWAY_PUBLIC_DOMAIN", ""),
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://profound-wholeness-production-b760.up.railway.app"
+]
+
 
 # -------------------------------
 # 3️⃣ Встановлені додатки
