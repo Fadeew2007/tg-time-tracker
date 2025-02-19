@@ -34,11 +34,17 @@ class ReportState(StatesGroup):
     choosing_year = State()
     choosing_month = State()
 
+@router.message()
+async def log_message(message: types.Message):
+    logging.info(f"📩 Отримано повідомлення: {message.text} від {message.from_user.id}")
+
 
 @router.message(Command("start"))
 async def start(message: types.Message):
     telegram_id = message.from_user.id
     username = message.from_user.username or f"user_{telegram_id}"
+
+    logging.info(f"🔑 Авторизація: Telegram ID: {telegram_id}, Username: {username}")
 
     response = requests.post(f"{API_URL}auth/", json={"telegram_id": telegram_id, "username": username})
 
@@ -55,6 +61,8 @@ async def start(message: types.Message):
             resize_keyboard=True
         )
 
+        logging.info(f"✅ Авторизація успішна: {telegram_id}")
+
         await message.answer(
             "🍰 Вітаємо в DESSEE!\n\n"
             "📌 Команди:\n"
@@ -68,6 +76,7 @@ async def start(message: types.Message):
             reply_markup=keyboard
         )
     else:
+        logging.error(f"❌ Помилка автентифікації: {response.text}")
         await message.answer("❌ Помилка автентифікації.")
 
 
