@@ -1,4 +1,3 @@
-import logging
 from datetime import datetime
 
 import requests
@@ -15,36 +14,18 @@ from bot.config import API_URL
 router = Router()
 user_tokens = {}
 
-logging.basicConfig(
-    filename="button_logs.txt",
-    level=logging.INFO,
-    format="%(asctime)s - %(message)s",
-    datefmt="%d-%m-%Y %H:%M:%S"
-)
-
 kyiv_tz = pytz.timezone("Europe/Kyiv")
-
-def log_button_press(user_id, username, button_text):
-    log_entry = f"{datetime.now(kyiv_tz).strftime('%d-%m-%Y %H:%M:%S')} | User ID: {user_id} | Username: {username} | Button: {button_text}"
-    logging.info(log_entry)
-    print(log_entry)
 
 class ReportState(StatesGroup):
     choosing_worker = State()
     choosing_year = State()
     choosing_month = State()
 
-@router.message()
-async def log_message(message: types.Message):
-    logging.info(f"📩 Отримано повідомлення: {message.text} від {message.from_user.id}")
-
 
 @router.message(Command("start"))
 async def start(message: types.Message):
     telegram_id = message.from_user.id
     username = message.from_user.username or f"user_{telegram_id}"
-
-    logging.info(f"🔑 Авторизація: Telegram ID: {telegram_id}, Username: {username}")
 
     response = requests.post(f"{API_URL}auth/", json={"telegram_id": telegram_id, "username": username})
 
@@ -61,8 +42,6 @@ async def start(message: types.Message):
             resize_keyboard=True
         )
 
-        logging.info(f"✅ Авторизація успішна: {telegram_id}")
-
         await message.answer(
             "🍰 Вітаємо в DESSEE!\n\n"
             "📌 Команди:\n"
@@ -76,7 +55,6 @@ async def start(message: types.Message):
             reply_markup=keyboard
         )
     else:
-        logging.error(f"❌ Помилка автентифікації: {response.text}")
         await message.answer("❌ Помилка автентифікації.")
 
 
@@ -84,8 +62,6 @@ async def start(message: types.Message):
 async def start_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
-
-    log_button_press(telegram_id, message.from_user.username, "▶️ Почати роботу")
 
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
@@ -112,8 +88,6 @@ async def pause_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
 
-    log_button_press(telegram_id, message.from_user.username, "⏸ Пауза")
-
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
         return
@@ -139,8 +113,6 @@ async def resume_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
 
-    log_button_press(telegram_id, message.from_user.username, "▶️ Відновити")
-
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
         return
@@ -165,8 +137,6 @@ async def resume_work(message: types.Message):
 async def stop_work(message: types.Message):
     telegram_id = message.from_user.id
     token = user_tokens.get(telegram_id)
-
-    log_button_press(telegram_id, message.from_user.username, "🛑 Завершити")
 
     if not token:
         await message.answer("❌ Будь ласка, спершу введіть /start для автентифікації.")
